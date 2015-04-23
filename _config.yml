@@ -2,10 +2,10 @@
 title: Camera-V
 email: camera.v.org@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  We're a notary.  Send us your Camera-V images & video!
+  We're a media notary.  Send us your Camera-V images & video!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://camera-v.org" # the base hostname & protocol for your site
-twitter_username: j3mspec
+twitter_username: guardianproject
 github_username:  camera-v
 collections:
   notary:
