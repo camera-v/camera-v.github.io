@@ -3,8 +3,13 @@ layout: page
 title: Notary
 permalink: /notary/
 ---
-<ul>
-{% for u in site.notary %}
-	<li><a href="/notary/{{ u.title }}/">{{ u.title }}</a></li>
-{% endfor %}
-</ul>
+<p class="cv_info_blurb">When we receive an image, video, or PGP key, and want to admit it into our system.  We notarize it, and post these notarization documents here.  <a href="/about">Learn more...</a></p>
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+<div id="cv_notary_list">
+	<ul>
+	{% for u in site.notary %}
+		<li><a href="/notary/{{ u.title }}/">{{ u.title }}</a></li>
+	{% endfor %}
+	</ul>
+</div>
