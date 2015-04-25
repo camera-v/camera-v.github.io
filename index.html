@@ -1,19 +1,22 @@
 ---
-layout: default
+layout: main
 ---
 
 <div class="home">
+    <div id="cv_simple_frame_holder">
+        <iframe src="https://j3m.camera-v.org/simple/" id="cv_simple_frame" frameborder="0" width="100%" height="250">Loading...</iframe>
+    </div>
 
-  <ul class="post-list">
+
+    <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+        <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h2>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+        </li>
     {% endfor %}
-  </ul>
+    </ul>
 
 </div>

@@ -6,6 +6,13 @@ $cv-text: #000000;
 $cv-info-bkg: #cccccc;
 $cv-info-border: #000000;
 
+#cv_simple_frame_holder {
+	overflow: hidden;
+	height:250px;
+	width:100%;
+	border-bottom:1px solid $cv-info-border;
+}
+
 p.cv_info_blurb {
 	background-color:$cv-info-bkg;
 	border:1px solid $cv-info-border;
@@ -17,12 +24,16 @@ p.rss-subscribe {
 }
 
 div#cv_notary_list {
-	margin-top:1em;
-	border-top:1px solid $cv-info-border;
 	padding-top:1em;
+	border-top:1px solid $cv-info-border;
 }
 
 a.cv_qanda, a.cv_qanda:hover {
 	text-decoration: none;
 	color:$cv-text;
+}
+
+#cv_notary_list, #cv_simple_frame_holder {
+	margin-bottom: 1em;
+	
 }
