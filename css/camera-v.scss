@@ -13,7 +13,7 @@ $cv-info-border: #000000;
 	border-bottom:1px solid $cv-info-border;
 }
 
-p.cv_info_blurb {
+p.cv_info_blurb, ol.cv_explain {
 	background-color:$cv-info-bkg;
 	border:1px solid $cv-info-border;
 	padding:0.3em;

@@ -6,15 +6,21 @@ permalink: /about/
 <p class="cv_info_blurb">Camera-V is a media notary service that attempts to verify and notarize images and video that have been created with the Camera-V app or any app that supports the J3M standard.</p>
 
 <a class="cv_qanda" name="how_is_this_a_notary"><h3>How is this a Notary?</h3></a>
-<p>A notary is...</p>
+<p>When someone in our Camera-V club takes a photo or video with the app, they submit it here.  Our verification server reads the J3M metadata in order to deduce the <b><i>provenance</i></b> of the media.  In our system, provenance is granted if:</p>
 
-<p>In order to generate a <i>notarization announcement</i>, someone with our private key submits the document to the blockchain via our <a href="http://proofofexistence.com" target="_blank">Proof of Existence</a> server.  The PGP message you see on any notary announcement page is then linked ot a record in the blockchain.  You can also verify the notary announcement by downloading the PGP message, and decrypting it using your GPG tool of choice.</p>
+<ol class="cv_explain">
+	<li>the hash of pixels in the image or video matches the hash declared in the J3M metadata bundle</li>
+	<li>the J3M metadata bundle in the media is properly signed by the photographer's PGP key</li>
+</ol>
+
+<p>Once provenance is established, someone at Camera-V notarizes the document by sending the <a href="http://en.wikipedia.org/wiki/Secure_Hash_Algorithm" target="_blank">SHA-256 hash representation</a> of the J3M metadata to <a href="http://en.wikipedia.org/wiki/Bitcoin" target="_blank">the Bitcoin blockchain</a> using our corresponding <a href="http://proofofexistence.com" target="_blank">Proof of Existence</a> server.  Once actual Bitcoin is paid to the resulting address, the media can be considered notarized, and we automatically generate a <b><i>notarization announcement</i></b>.</p>
+
+<p>You can verify the PGP message you see at the bottom of any notary announcement by downloading the PGP message, and decrypting it using your GPG tool of choice using our <a href="https://keybase.io/camerav/key.asc" target="_blank">GPG key</a>.</p>
 
 <p>We use version control to keep permanent record of these notary announcements.  In addition to finding these annoucements here, you can find them on <a href="https://github.com/camera-v/camera-v.github.io" target="_blank">our github page</a>.  Every once in awhile, we will commit all new annoucements to a repository where they can be audited publicly.</p>
 
 <a class="cv_qanda" name="what_is_proof"><h3>What is <b><i>proof</i></b>.camera-v.org?</h3></a>
 <p>That's where we host our Proof of Existence server.</p>
-<p>Proof of Existence is...</p>
 
 <a class="cv_qanda" name="what_is_j3m"><h3>What is <b><i>j3m</i></b>.camera-v.org?</h3></a>
 <p>This is where we index, analyze, and perform queries on the metadata attached to submissions.</p>
